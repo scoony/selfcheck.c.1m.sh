@@ -16,5 +16,8 @@ Also gonna try GitHub with this project...
 - apt-get install smartmontools
 - apt-get install net-tools
 
+**Temporary workaround for the smartctl issue:"
+'sudo addgroup -a <user> disk'
+
 **Result:**
 ![alt text](https://i.imgur.com/p9LLYwm.png)
