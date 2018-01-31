@@ -105,7 +105,7 @@ if [[ ! -f "$icons_cache" ]]; then
 fi
 if [[ ! -f "$icons_cache/motherboard.png" ]] ; then curl -o "$icons_cache/motherboard.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/motherboard.png" ; fi
 if [[ ! -f "$icons_cache/cpu.png" ]] ; then curl -o "$icons_cache/cpu.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/cpu.png" ; fi
-if [[ ! -f "$icons_cache/ram.png" ]] ; then curl -o "$icons_cache/ram.png" "hhttps://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/ram.png" ; fi
+if [[ ! -f "$icons_cache/ram.png" ]] ; then curl -o "$icons_cache/ram.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/ram.png" ; fi
 if [[ ! -f "$icons_cache/gpu.png" ]] ; then curl -o "$icons_cache/gpu.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/gpu.png" ; fi
 if [[ ! -f "$icons_cache/ubuntu.png" ]] ; then curl -o "$icons_cache/ubuntu.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/ubuntu.png" ; fi
 if [[ ! -f "$icons_cache/rj45.png" ]] ; then curl -o "$icons_cache/rj45.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/rj45.png" ; fi
