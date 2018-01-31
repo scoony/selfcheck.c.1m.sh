@@ -27,4 +27,4 @@ Also gonna try GitHub with this project...
 
 ![alt text](https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.screenshots/Capture%20d%E2%80%99%C3%A9cran%20de%202018-01-31%2008-21-09.png)
 
-![alt text](https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.screenshots/Capture%20d%E2%80%99%C3%A9cran%20de%202018-01-31%2008-21-45.png)
+![alt text](https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.screenshots/Capture%20d%E2%80%99%C3%A9cran%20de%202018-01-31%2008-21-25.png)
