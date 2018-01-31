@@ -103,34 +103,34 @@ icons_cache=`echo $HOME/.config/argos/.cache-icons`
 if [[ ! -f "$icons_cache" ]]; then
   mkdir -p $icons_cache
 fi
-if [[ ! -f "$icons_cache/motherboard.png" ]] ; then curl -o "$icons_cache/motherboard.png" "https://i.imgur.com/bBfsqnJ.png" ; fi
-if [[ ! -f "$icons_cache/cpu.png" ]] ; then curl -o "$icons_cache/cpu.png" "https://i.imgur.com/ShyTGNn.png" ; fi
-if [[ ! -f "$icons_cache/ram.png" ]] ; then curl -o "$icons_cache/ram.png" "https://i.imgur.com/E7Kvyqm.png" ; fi
-if [[ ! -f "$icons_cache/gpu.png" ]] ; then curl -o "$icons_cache/gpu.png" "https://i.imgur.com/ELB5KUP.png" ; fi
-if [[ ! -f "$icons_cache/ubuntu.png" ]] ; then curl -o "$icons_cache/ubuntu.png" "https://i.imgur.com/x6vlLRD.png" ; fi
-if [[ ! -f "$icons_cache/rj45.png" ]] ; then curl -o "$icons_cache/rj45.png" "https://i.imgur.com/eldC4Sk.png" ; fi
-if [[ ! -f "$icons_cache/wifi.png" ]] ; then curl -o "$icons_cache/wifi.png" "https://i.imgur.com/z4ycysV.png" ; fi
-if [[ ! -f "$icons_cache/net_speed.png" ]] ; then curl -o "$icons_cache/net_speed.png" "https://i.imgur.com/mZAhls9.png" ; fi
-if [[ ! -f "$icons_cache/net.png" ]] ; then curl -o "$icons_cache/net.png" "https://i.imgur.com/3DXg33X.png" ; fi
-if [[ ! -f "$icons_cache/hdd.png" ]] ; then curl -o "$icons_cache/hdd.png" "https://i.imgur.com/YlbC7FT.png" ; fi
-if [[ ! -f "$icons_cache/ssd.png" ]] ; then curl -o "$icons_cache/ssd.png" "https://i.imgur.com/ZyV1iiy.png" ; fi
-if [[ ! -f "$icons_cache/usb.png" ]] ; then curl -o "$icons_cache/usb.png" "https://i.imgur.com/NvUQQE6.png" ; fi
-if [[ ! -f "$icons_cache/service.png" ]] ; then curl -o "$icons_cache/service.png" "https://i.imgur.com/AMy7XZg.png" ; fi
-if [[ ! -f "$icons_cache/selfcheck.png" ]] ; then curl -o "$icons_cache/selfcheck.png" "https://i.imgur.com/9xGmMuf.png" ; fi
-if [[ ! -f "$icons_cache/selfcheck_bad.png" ]] ; then curl -o "$icons_cache/selfcheck_bad.png" "https://i.imgur.com/BWEkcl4.png" ; fi
-if [[ ! -f "$icons_cache/user.png" ]] ; then curl -o "$icons_cache/user.png" "https://i.imgur.com/r36Ccmh.png" ; fi
-if [[ ! -f "$icons_cache/user_sudo.png" ]] ; then curl -o "$icons_cache/user_sudo.png" "https://i.imgur.com/dgfiaW7.png" ; fi
-if [[ ! -f "$icons_cache/uptime.png" ]] ; then curl -o "$icons_cache/uptime.png" "https://i.imgur.com/s9apy5V.png" ; fi
-if [[ ! -f "$icons_cache/vpn.png" ]] ; then curl -o "$icons_cache/vpn.png" "https://i.imgur.com/Rs5cDW7.png" ; fi
-if [[ ! -f "$icons_cache/dns.png" ]] ; then curl -o "$icons_cache/dns.png" "https://i.imgur.com/cwT0sze.png" ; fi
-if [[ ! -f "$icons_cache/background.png" ]] ; then curl -o "$icons_cache/background.png" "https://i.imgur.com/eilhyyl.png" ; fi
-if [[ ! -f "$icons_cache/x64.png" ]] ; then curl -o "$icons_cache/x64.png" "https://i.imgur.com/By7QyBT.png" ; fi
-if [[ ! -f "$icons_cache/x86.png" ]] ; then curl -o "$icons_cache/x86.png" "https://i.imgur.com/IF3hH04.png" ; fi
-if [[ ! -f "$icons_cache/kernel.png" ]] ; then curl -o "$icons_cache/kernel.png" "https://i.imgur.com/S9ryxLo.png" ; fi
-if [[ ! -f "$icons_cache/version.png" ]] ; then curl -o "$icons_cache/version.png" "https://i.imgur.com/3QcPjCE.png" ; fi
-if [[ ! -f "$icons_cache/settings.png" ]] ; then curl -o "$icons_cache/settings.png" "https://i.imgur.com/uBXrHMj.png" ; fi
-if [[ ! -f "$icons_cache/local_ip.png" ]] ; then curl -o "$icons_cache/local_ip.png" "https://i.imgur.com/7CGZ8KZ.png" ; fi
-if [[ ! -f "$icons_cache/health.png" ]] ; then curl -o "$icons_cache/health.png" "https://i.imgur.com/WajHgBS.png" ; fi
+if [[ ! -f "$icons_cache/motherboard.png" ]] ; then curl -o "$icons_cache/motherboard.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/motherboard.png" ; fi
+if [[ ! -f "$icons_cache/cpu.png" ]] ; then curl -o "$icons_cache/cpu.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/cpu.png" ; fi
+if [[ ! -f "$icons_cache/ram.png" ]] ; then curl -o "$icons_cache/ram.png" "hhttps://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/ram.png" ; fi
+if [[ ! -f "$icons_cache/gpu.png" ]] ; then curl -o "$icons_cache/gpu.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/gpu.png" ; fi
+if [[ ! -f "$icons_cache/ubuntu.png" ]] ; then curl -o "$icons_cache/ubuntu.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/ubuntu.png" ; fi
+if [[ ! -f "$icons_cache/rj45.png" ]] ; then curl -o "$icons_cache/rj45.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/rj45.png" ; fi
+if [[ ! -f "$icons_cache/wifi.png" ]] ; then curl -o "$icons_cache/wifi.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/wifi.png" ; fi
+if [[ ! -f "$icons_cache/net_speed.png" ]] ; then curl -o "$icons_cache/net_speed.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/net_speed.png" ; fi
+if [[ ! -f "$icons_cache/net.png" ]] ; then curl -o "$icons_cache/net.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/net.png" ; fi
+if [[ ! -f "$icons_cache/hdd.png" ]] ; then curl -o "$icons_cache/hdd.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/hdd.png" ; fi
+if [[ ! -f "$icons_cache/ssd.png" ]] ; then curl -o "$icons_cache/ssd.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/ssd.png" ; fi
+if [[ ! -f "$icons_cache/usb.png" ]] ; then curl -o "$icons_cache/usb.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/usb.png" ; fi
+if [[ ! -f "$icons_cache/service.png" ]] ; then curl -o "$icons_cache/service.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/service.png" ; fi
+if [[ ! -f "$icons_cache/selfcheck.png" ]] ; then curl -o "$icons_cache/selfcheck.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/selfcheck.png" ; fi
+if [[ ! -f "$icons_cache/selfcheck_bad.png" ]] ; then curl -o "$icons_cache/selfcheck_bad.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/selfcheck_bad.png" ; fi
+if [[ ! -f "$icons_cache/user.png" ]] ; then curl -o "$icons_cache/user.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/user.png" ; fi
+if [[ ! -f "$icons_cache/user_sudo.png" ]] ; then curl -o "$icons_cache/user_sudo.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/user_sudo.png" ; fi
+if [[ ! -f "$icons_cache/uptime.png" ]] ; then curl -o "$icons_cache/uptime.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/uptime.png" ; fi
+if [[ ! -f "$icons_cache/vpn.png" ]] ; then curl -o "$icons_cache/vpn.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/vpn.png" ; fi
+if [[ ! -f "$icons_cache/dns.png" ]] ; then curl -o "$icons_cache/dns.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/dns.png" ; fi
+if [[ ! -f "$icons_cache/background.png" ]] ; then curl -o "$icons_cache/background.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/background.png" ; fi
+if [[ ! -f "$icons_cache/x64.png" ]] ; then curl -o "$icons_cache/x64.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/x64.png" ; fi
+if [[ ! -f "$icons_cache/x86.png" ]] ; then curl -o "$icons_cache/x86.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/x86.png" ; fi
+if [[ ! -f "$icons_cache/kernel.png" ]] ; then curl -o "$icons_cache/kernel.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/kernel.png" ; fi
+if [[ ! -f "$icons_cache/version.png" ]] ; then curl -o "$icons_cache/version.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/version.png" ; fi
+if [[ ! -f "$icons_cache/settings.png" ]] ; then curl -o "$icons_cache/settings.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/settings.png" ; fi
+if [[ ! -f "$icons_cache/local_ip.png" ]] ; then curl -o "$icons_cache/local_ip.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/local_ip.png" ; fi
+if [[ ! -f "$icons_cache/health.png" ]] ; then curl -o "$icons_cache/health.png" "https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.cache-icons/health.png" ; fi
 
 #### Get my script icon
 SELFCHECK_ICON=$(curl -s "file://$icons_cache/selfcheck.png" | base64 -w 0)
