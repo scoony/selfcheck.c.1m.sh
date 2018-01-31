@@ -10,7 +10,7 @@ if [[ -f "~/selfcheck-update.sh" ]]; then
 fi
 
 #### Autoupdate Process
-script_pastebin="https://pastebin.com/raw/398tYmiu"
+script_pastebin="https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/selfcheck.c.1m.sh"
 local_version=$version
 pastebin_version=`wget -O- -q "$script_pastebin" | grep "^version=" | sed '/grep/d' | sed 's/.*version="//' | sed 's/".*//'`
 
