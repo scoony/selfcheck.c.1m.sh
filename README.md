@@ -9,6 +9,7 @@ Also gonna try GitHub with this project...
 **Features:**
 - collect and display infos on hardware/software
 - detect and notify if any error(s) thru push notification
+- an auto-updating process is included (not based on git)
 
 **Dependencies required:**
 - `sudo apt-get install mesa-utils`
