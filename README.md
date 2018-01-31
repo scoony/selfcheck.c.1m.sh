@@ -21,7 +21,7 @@ Also gonna try GitHub with this project...
 - `sudo visudo` and add at then of the file `%sudo   ALL = (ALL) NOPASSWD: /usr/sbin/smartctl`
 
 **Easy Installation:**
-- `wget -q https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/selfcheck.c.1m.sh -O ~/.config/argos/selfcheck.c.1m.sh && sed -i -e 's/\r//g' ~/.config/argos/selfcheck.c.1m.sh && chmod +x ~/.config/argos/selfcheck.c.1m.sh`
+- simply copy/paste in a terminal: `wget -q https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/selfcheck.c.1m.sh -O ~/.config/argos/selfcheck.c.1m.sh && sed -i -e 's/\r//g' ~/.config/argos/selfcheck.c.1m.sh && chmod +x ~/.config/argos/selfcheck.c.1m.sh`
 
 **Result:**
 ![alt text](https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.screenshots/Capture%20d%E2%80%99%C3%A9cran%20de%202018-01-31%2008-19-56.png)
