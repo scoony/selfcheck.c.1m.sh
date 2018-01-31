@@ -20,7 +20,7 @@ Also gonna try GitHub with this project...
 **Temporary workaround for the smartctl sudo issue:**
 - `sudo addgroup -a <user> disk`
 - `sudo visudo` and add at then of the file `%sudo   ALL = (ALL) NOPASSWD: /usr/sbin/smartctl`
-> the user must be in the sudo group
+> the user must be in the sudo group<br>
 > can be done using `sudo addgroup -a <user> sudo`
 
 **Easy Installation:**
