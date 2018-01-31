@@ -17,7 +17,8 @@ Also gonna try GitHub with this project...
 - apt-get install net-tools
 
 **Temporary workaround for the smartctl issue:**
-`sudo addgroup -a <user> disk`
+- `sudo addgroup -a <user> disk`
+- `sudo visudo` and add at then of the file `%sudo   ALL = (ALL) NOPASSWD: /usr/sbin/smartctl`
 
 **Result:**
 ![alt text](https://i.imgur.com/p9LLYwm.png)
