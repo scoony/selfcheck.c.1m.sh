@@ -21,4 +21,10 @@ Also gonna try GitHub with this project...
 - `sudo visudo` and add at then of the file `%sudo   ALL = (ALL) NOPASSWD: /usr/sbin/smartctl`
 
 **Result:**
-![alt text](https://i.imgur.com/p9LLYwm.png)
+![alt text](https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.screenshots/Capture%20d%E2%80%99%C3%A9cran%20de%202018-01-31%2008-19-56.png)
+
+![alt text](https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.screenshots/Capture%20d%E2%80%99%C3%A9cran%20de%202018-01-31%2008-20-48.png)
+
+![alt text](https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.screenshots/Capture%20d%E2%80%99%C3%A9cran%20de%202018-01-31%2008-21-09.png)
+
+![alt text](https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/.screenshots/Capture%20d%E2%80%99%C3%A9cran%20de%202018-01-31%2008-21-45.png)
