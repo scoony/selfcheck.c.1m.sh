@@ -11,10 +11,10 @@ Also gonna try GitHub with this project...
 - detect and notify if any error(s) thru push notification
 
 **Dependencies required:**
-- `apt-get install mesa-utils`
-- `apt-get install curl`
-- `apt-get install smartmontools`
-- `apt-get install net-tools`
+- `sudo apt-get install mesa-utils`
+- `sudo apt-get install curl`
+- `sudo apt-get install smartmontools`
+- `sudo apt-get install net-tools`
 
 **Temporary workaround for the smartctl sudo issue:**
 - `sudo addgroup -a <user> disk`
