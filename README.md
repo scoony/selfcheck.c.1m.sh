@@ -20,8 +20,10 @@ Also gonna try GitHub with this project...
 - `sudo addgroup -a <user> disk`
 - `sudo visudo` and add at then of the file `%sudo   ALL = (ALL) NOPASSWD: /usr/sbin/smartctl`
 
-**Easy Installation:**<br>
-simply copy/paste in a terminal:<br>
+**Easy Installation:**
+
+simply copy/paste in a terminal:
+
 `wget -q https://raw.githubusercontent.com/scoony/selfcheck.c.1m.sh/master/selfcheck.c.1m.sh -O ~/.config/argos/selfcheck.c.1m.sh && sed -i -e 's/\r//g' ~/.config/argos/selfcheck.c.1m.sh && chmod +x ~/.config/argos/selfcheck.c.1m.sh`
 
 **Result:**
