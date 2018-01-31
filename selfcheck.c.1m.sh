@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-version="0.0.0.22"
+version="0.0.0.23"
 
 ## NOTIFICATION: zenity  --notification  --window-icon=update.png  --text "message"
 
