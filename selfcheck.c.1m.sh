@@ -96,6 +96,28 @@ zenity --progress \
   --auto-kill
 fi
 
+#### Declaring the push function
+## usage: push-message "title" "message"
+push-message() {
+  push_title=$1
+  push_content=$2
+  zenity --notification --window-icon="$HOME/.config/argos/.cache-icons/selfcheck.png" --text "$push_content" 2>/dev/null
+  for user in {1..10}; do
+    destinataire=`eval echo "\\$destinataire_"$user`
+    if [ -n "$destinataire" ]; then
+      curl -s \
+        --form-string "token=$token_app" \
+        --form-string "user=$destinataire" \
+        --form-string "title=$push_title" \
+        --form-string "message=$push_content" \
+        --form-string "html=1" \
+        --form-string "priority=0" \
+        https://api.pushover.net/1/messages.json > /dev/null
+    fi
+  done
+}
+
+
 #### Get services list
 list_services=`cat ~/.config/argos/.selfcheck-services 2>/dev/null | sed 's/|/ /g'`
 
