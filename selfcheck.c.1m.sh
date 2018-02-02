@@ -282,6 +282,7 @@ current_ip=`dig +short myip.opendns.com @resolver1.opendns.com`
 if [[ "$router_ip" == "$current_ip" ]]; then
   ERROR="1"
   main_title="VPN Désactivé"
+  push-message "SelfCheck" "Le VPN est désactivé"
 fi
 
 #### HDD Sizes and mount points
@@ -344,6 +345,7 @@ for service in $list_services; do
     my_service_status+=("Inactif")
     ERROR="1"
     main_title="Service(s) Inactif(s)"
+    push-message "SelfCheck" "Le service $service ne répond plus"
   fi
 done
 my_service_amount=`echo $list_services | wc -w`
