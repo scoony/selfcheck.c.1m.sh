@@ -363,6 +363,7 @@ Afin de pouvoir les surveiller il faut:
 
 EOT
 smart_info=`echo -e "zenity --text-info --width=700 --height=400 --title \"Root required\" --filename \"$HOME/root_warning.txt\""`
+push_settings=`echo -e "zenity --forms --width=500 --window-icon=\"~/.config/argos/.cache-icons/selfcheck.png\" --title=\"Paramètres PushOver\" --text=\"Vos clés PushOver\rDisponibles sur le site http://www.pushover.net\" --add-entry=\"API Key\" --add-entry=\"User_1 Key\" --add-entry=\"User_2 Key\" --separator=\" \" 2>/dev/null >~/.config/argos/.selfcheck-pushover"`
 
 #### Affichage
 if [[ "$ERROR" == "" ]]; then
@@ -488,3 +489,4 @@ for output3 in {0..100}; do
 done
 echo "-- ---"
 printf "%-2s %s | image='$SETTINGS_ICON' imageWidth=18 ansi=true font='Ubuntu Mono' trim=false bash='$settings_services' terminal=false \n" "--" "Paramètres des services à surveiller"
+printf "%-2s %s | image='$SETTINGS_ICON' imageWidth=18 ansi=true font='Ubuntu Mono' trim=false bash='$push_settings' terminal=false \n" "" "Paramètres des messages push"
