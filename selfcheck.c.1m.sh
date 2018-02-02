@@ -101,6 +101,9 @@ fi
 push-message() {
   push_title=$1
   push_content=$2
+  token_app=`cat ~/.config/argos/.selfcheck-pushover | awk '{print $1}'`
+  destinataire_1=`cat ~/.config/argos/.selfcheck-pushover | awk '{print $2}'`
+  destinataire_2=`cat ~/.config/argos/.selfcheck-pushover | awk '{print $3}'`
   zenity --notification --window-icon="$HOME/.config/argos/.cache-icons/selfcheck.png" --text "$push_content" 2>/dev/null
   for user in {1..10}; do
     destinataire=`eval echo "\\$destinataire_"$user`
