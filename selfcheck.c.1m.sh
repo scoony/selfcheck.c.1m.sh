@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-version="0.0.0.23"
+version="0.0.0.24"
 
 
 ## NOTIFICATION: zenity  --notification  --window-icon=update.png  --text "message"
@@ -95,6 +95,31 @@ zenity --progress \
   --auto-close \
   --auto-kill
 fi
+
+#### Declaring the push function
+## usage: push-message "title" "message"
+push-message() {
+  push_title=$1
+  push_content=$2
+  token_app=`cat ~/.config/argos/.selfcheck-pushover | awk '{print $1}'`
+  destinataire_1=`cat ~/.config/argos/.selfcheck-pushover | awk '{print $2}'`
+  destinataire_2=`cat ~/.config/argos/.selfcheck-pushover | awk '{print $3}'`
+  zenity --notification --window-icon="$HOME/.config/argos/.cache-icons/selfcheck.png" --text "$push_content" 2>/dev/null
+  for user in {1..10}; do
+    destinataire=`eval echo "\\$destinataire_"$user`
+    if [ -n "$destinataire" ]; then
+      curl -s \
+        --form-string "token=$token_app" \
+        --form-string "user=$destinataire" \
+        --form-string "title=$push_title" \
+        --form-string "message=$push_content" \
+        --form-string "html=1" \
+        --form-string "priority=0" \
+        https://api.pushover.net/1/messages.json > /dev/null
+    fi
+  done
+}
+
 
 #### Get services list
 list_services=`cat ~/.config/argos/.selfcheck-services 2>/dev/null | sed 's/|/ /g'`
@@ -257,6 +282,7 @@ current_ip=`dig +short myip.opendns.com @resolver1.opendns.com`
 if [[ "$router_ip" == "$current_ip" ]]; then
   ERROR="1"
   main_title="VPN Désactivé"
+  push-message "SelfCheck" "Le VPN est désactivé"
 fi
 
 #### HDD Sizes and mount points
@@ -319,6 +345,7 @@ for service in $list_services; do
     my_service_status+=("Inactif")
     ERROR="1"
     main_title="Service(s) Inactif(s)"
+    push-message "SelfCheck" "Le service $service ne répond plus"
   fi
 done
 my_service_amount=`echo $list_services | wc -w`
@@ -341,6 +368,7 @@ Afin de pouvoir les surveiller il faut:
 
 EOT
 smart_info=`echo -e "zenity --text-info --width=700 --height=400 --title \"Root required\" --filename \"$HOME/root_warning.txt\""`
+push_settings=`echo -e "zenity --forms --width=500 --window-icon=\"~/.config/argos/.cache-icons/selfcheck.png\" --title=\"Paramètres PushOver\" --text=\"Vos clés PushOver\rDisponibles sur le site http://www.pushover.net\" --add-entry=\"API Key\" --add-entry=\"User_1 Key\" --add-entry=\"User_2 Key\" --separator=\" \" 2>/dev/null >~/.config/argos/.selfcheck-pushover"`
 
 #### Affichage
 if [[ "$ERROR" == "" ]]; then
@@ -466,3 +494,4 @@ for output3 in {0..100}; do
 done
 echo "-- ---"
 printf "%-2s %s | image='$SETTINGS_ICON' imageWidth=18 ansi=true font='Ubuntu Mono' trim=false bash='$settings_services' terminal=false \n" "--" "Paramètres des services à surveiller"
+printf "%-2s %s | image='$SETTINGS_ICON' imageWidth=18 ansi=true font='Ubuntu Mono' trim=false bash='$push_settings' terminal=false \n" "" "Paramètres des messages push"
