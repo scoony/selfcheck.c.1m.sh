@@ -7,7 +7,7 @@ version="0.0.0.24"
 
 #### Cleaning
 if [[ -f "~/selfcheck-update.sh" ]]; then
-  rm $HOME/selfcheck-update.sh
+  rm -f $HOME/selfcheck-update.sh
 fi
 
 #### Autoupdate Process
