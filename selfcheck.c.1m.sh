@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-version="0.0.0.24"
+version="0.0.0.25"
 
 
 ## NOTIFICATION: zenity  --notification  --window-icon=update.png  --text "message"
@@ -189,7 +189,7 @@ LOCAL_IP_ICON=$(curl -s "file://$icons_cache/local_ip.png" | base64 -w 0)
 HEALTH_ICON=$(curl -s "file://$icons_cache/health.png" | base64 -w 0)
 
 #### Get Hardware informations
-cpu_info_raw=`lscpu | grep -i "Model name:" | cut -d':' -f2- - | sed -e 's/^[ \t]*//'`
+cpu_info_raw=`lscpu | grep "modèle" | cut -d':' -f2- - | sed -e 's/^[ \t]*//'`
 if [[ "$cpu_info_raw" =~ "-" ]]; then
   cpu_type=`echo $cpu_info_raw | sed 's/-.*//' | sed 's/(R)//' | sed 's/(TM)//'`
   cpu_model=`echo $cpu_info_raw | sed 's/.*-//' | sed 's/ CPU//'`
