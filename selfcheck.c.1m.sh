@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-version="0.0.0.25"
+version="0.0.0.26"
 
 
 ## NOTIFICATION: zenity  --notification  --window-icon=update.png  --text "message"
@@ -278,11 +278,16 @@ fi
 #### Check IP (for VPN)
 local_ip=`hostname -I | cut -d' ' -f1`
 router_ip=`dig -b $local_ip +short myip.opendns.com @resolver1.opendns.com`
-current_ip=`dig +short myip.opendns.com @resolver1.opendns.com`
-if [[ "$router_ip" == "$current_ip" ]]; then
-  ERROR="1"
-  main_title="VPN Désactivé"
-  push-message "SelfCheck" "Le VPN est désactivé"
+if [[ "$vpn_eth" != "" ]]; then
+  current_ip=`dig +short myip.opendns.com @resolver1.opendns.com`
+  if [[ "$current_ip" == "" ]]; then
+    current_ip=`dig -4 +short myip.opendns.com @resolver1.opendns.com`
+  fi
+  if [[ "$router_ip" == "$current_ip" ]]; then
+    ERROR="1"
+    main_title="VPN Désactivé"
+    push-message "SelfCheck" "Le VPN est désactivé"
+  fi
 fi
 
 #### HDD Sizes and mount points
