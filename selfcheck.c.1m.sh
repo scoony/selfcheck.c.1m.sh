@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-version="0.0.0.26"
+version="0.0.0.27"
 
 
 ## NOTIFICATION: zenity  --notification  --window-icon=update.png  --text "message"
@@ -432,9 +432,9 @@ fi
 printf "%-2s \e[1m%-20s\e[0m : %s | image='%s' imageWidth=18 ansi=true font='Ubuntu Mono' trim=false \n" "--" "Serveur DNS" "$dns_eth" "$DNS_ICON"
 
 #### IPS for VPN
-if [[ "$current_ip" == "$router_ip" ]]; then
+if [[ "$current_ip" == "$router_ip" ]] || [[ "$vpn_eth" == "" ]]; then
   printf "\e[1m%-25s\e[0m : %-15s  | ansi=true font='Ubuntu Mono' trim=false \n" "Status IP" "Visible"
-  printf "%-2s [%4s] \e[1m%-13s\e[0m : %s | image='%s' imageWidth=18 ansi=true font='Ubuntu Mono' trim=false \n" "--" "IPV4" "IP Publique" "$current_ip" "$NET_ICON"
+  printf "%-2s [%4s] \e[1m%-13s\e[0m : %s | image='%s' imageWidth=18 ansi=true font='Ubuntu Mono' trim=false \n" "--" "IPV4" "IP Publique" "$router_ip" "$NET_ICON"
 else
   printf "\e[1m%-25s\e[0m : %-15s  | ansi=true font='Ubuntu Mono' trim=false \n" "Status IP" "Masquée"
   printf "%-2s \e[1m[\e[0m%4s\e[1m]\e[0m \e[1m%-13s\e[0m : %s | image='%s' imageWidth=18 ansi=true font='Ubuntu Mono' trim=false \n" "--" "IPV4" "IP Publique" "$current_ip" "$NET_ICON"
