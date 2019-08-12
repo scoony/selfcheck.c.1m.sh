@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-version="0.0.0.27"
+version="0.0.0.28"
 
 
 ## NOTIFICATION: zenity  --notification  --window-icon=update.png  --text "message"
@@ -215,10 +215,10 @@ users_amount=`getent passwd | grep "1[0-9][0-9][0-9]" | awk -F':' '{ print $1}' 
 users_sudo=`grep '^sudo' /etc/group`
 
 #### Get overall HDD capacity
-overall_hdd=`df --total -hl | grep "total" | awk '{print $2}' | sed 's/T/ To/' | sed 's/G/ Go/'`
+overall_hdd=`df --total -Hl | grep "total" | awk '{print $2}' | sed 's/T/ To/' | sed 's/G/ Go/'`
 
 #### Get overall Free capacity
-overall_free=`df --total -hl | grep "total" | awk '{print $4}' | sed 's/T/ To/' | sed 's/G/ Go/'`
+overall_free=`df --total -Hl | grep "total" | awk '{print $4}' | sed 's/T/ To/' | sed 's/G/ Go/'`
 
 #### Get HDD bad sectors
 ## require user in group disk and visudo to allow sudo smartctl without pass
