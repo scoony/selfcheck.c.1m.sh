@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-version="0.0.0.28"
+version="0.0.0.29"
 
 
 ## NOTIFICATION: zenity  --notification  --window-icon=update.png  --text "message"
@@ -491,7 +491,11 @@ printf "\e[1m%-25s\e[0m : %-15s  | ansi=true font='Ubuntu Mono' trim=false \n" "
 for output3 in {0..100}; do
   if [[ "${my_service_name[$output3]}" != "" ]]; then
     if [[ "${my_service_status[$output3]}" == "Actif" ]]; then
-      printf "%-2s \e[1m%-20s\e[0m : %s | image='%s' imageWidth=18 ansi=true font='Ubuntu Mono' trim=false \n" "--" "${my_service_name[$output3]}" "${my_service_status[$output3]} (PID: ${my_service_pid[$output3]})" "$SERVICES_ICON"
+      if [[ "${my_service_pid[$output3]}" != "" ]]; then
+        printf "%-2s \e[1m%-20s\e[0m : %s | image='%s' imageWidth=18 ansi=true font='Ubuntu Mono' trim=false \n" "--" "${my_service_name[$output3]}" "${my_service_status[$output3]} (PID: ${my_service_pid[$output3]})" "$SERVICES_ICON"
+      else
+        printf "%-2s \e[1m%-20s\e[0m : %s | image='%s' imageWidth=18 ansi=true font='Ubuntu Mono' trim=false \n" "--" "${my_service_name[$output3]}" "${my_service_status[$output3]}" "$SERVICES_ICON"
+      fi
     else
       printf "%-2s \e[1m%-20s\e[0m : %s | image='%s' imageWidth=18 ansi=true font='Ubuntu Mono' trim=false \n" "--" "${my_service_name[$output3]}" "${my_service_status[$output3]}" "$SERVICES_ICON"
     fi
